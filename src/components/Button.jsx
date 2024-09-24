@@ -1,60 +1,73 @@
-import { twMerge } from "tailwind-merge";
+import React from "react";
 import { cva } from "class-variance-authority";
+import { twMerge } from "tailwind-merge";
 
+// Define the styles using cva
 const buttonStyles = cva(
-	"font-semibold rounded-md transition-colors duration-200 transition-opacity hover:opacity-[0.8]", // base classes
+	"rounded-full font-medium transition-all", // Base styles
 	{
 		variants: {
-			size: {
-				small: "px-2 py-1 text-sm",
-				medium: "px-4 py-2 text-md",
-				large: "px-6 py-3 text-lg",
+			filled: {
+				true: "", // Filled styles will be added via color variants
+				false: "border", // Flat style (no background, just a border)
 			},
 			color: {
-				orange: "",
-				black: "",
+				blue: "text-white bg-primary-blue-500 hover:bg-primary-blue-600 active:bg-primary-blue-700 border-primary-blue-500",
+				red: "text-white bg-primary-red-500 hover:bg-primary-red-600 active:bg-primary-red-700 border-primary-red-500",
 			},
-			variant: {
-				filled: "",
-				outline: "border-2",
+			size: {
+				sm: "px-4 py-2 text-sm",
+				md: "px-6 py-3 text-base",
+				lg: "px-8 py-4 text-lg",
+			},
+			disabled: {
+				true: "opacity-50 cursor-not-allowed",
+				false: "", // No extra class for the default non-disabled state
 			},
 		},
 		compoundVariants: [
+			// Handle flat variants for each color
 			{
-				color: "orange",
-				variant: "filled",
-				class: "bg-orange-500 text-white ",
-			},
-			{ color: "black", variant: "filled", class: "bg-black text-white" },
-			{
-				color: "orange",
-				variant: "outline",
-				class:
-					"border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black",
+				filled: false,
+				color: "blue",
+				className:
+					"text-primary-blue-500 hover:bg-primary-blue-50 active:bg-primary-blue-100",
 			},
 			{
-				color: "black",
-				variant: "outline",
-				class: "border-black text-black hover:text-white hover:bg-black",
+				filled: false,
+				color: "red",
+				className:
+					"text-primary-red-500 hover:bg-primary-red-50 active:bg-primary-red-100",
 			},
 		],
 		defaultVariants: {
-			size: "medium",
-			color: "black",
-			variant: "filled",
+			filled: true,
+			color: "blue",
+			size: "md",
+			disabled: false,
 		},
 	}
 );
 
-export default function Button(props) {
-	const { className, children, size, color, variant, ...buttonProps } = props;
+const Button = ({
+	children,
+	filled = true,
+	color = "blue",
+	size = "md",
+	disabled = false,
+	className = "",
+	...props
+}) => {
+	const classes = twMerge(
+		buttonStyles({ filled, color, size, disabled }),
+		className
+	);
 
 	return (
-		<button
-			className={twMerge(buttonStyles({ size, color, variant }), className)}
-			{...buttonProps}
-		>
+		<button className={classes} disabled={disabled} {...props}>
 			{children}
 		</button>
 	);
-}
+};
+
+export default Button;
