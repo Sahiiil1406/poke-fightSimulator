@@ -38,8 +38,10 @@ module.exports = {
 					950: "#142c57",
 				},
 			},
+			fontFamily: {
+				montserrat: ["Montserrat Alternates", "sans-serif"],
+			},
 		},
 	},
-
 	plugins: [require("tailwindcss-animate")],
 };
