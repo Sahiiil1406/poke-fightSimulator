@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/5a5c2865c8fa7a166d94d0880ca9eebc?family=Sharp+Grotesk+Medium+25+Regular);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,4 +11,8 @@ body {
 
 * {
 	font-family: "Montserrat Alternates", sans-serif;
+}
+
+.grotesk {
+	font-family: "Sharp Grotesk Medium 25 Regular";
 }
