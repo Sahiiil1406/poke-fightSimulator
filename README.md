@@ -1,3 +1,6 @@
+**Merged Pull Requests and Deployed Main branch can be previewed here**
+[Deployed Website Link](https://ecellnitk.netlify.app)
+
 
 # Project Setup Guide
 
@@ -69,6 +72,8 @@ To maintain clarity and ease of use, the project is organized as follows:
 - **Code Reusability**: Keep components generic if they’re likely to be reused on multiple pages. Place such components in the root `components/` folder.
 
 - **Code Organization**: Keep your code **well-organized** and **modular**. Each page should have its own directory with subcomponents for different sections of the page.
+
+- **Responsivness**: Make sure that the website looks and works for all screen sizes ie. mobile desktop tab .
 
 ## Using Tailwind Theme Colors
 
