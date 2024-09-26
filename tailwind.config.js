@@ -52,6 +52,7 @@ module.exports = {
 			},
 			fontFamily: {
 				montserrat: ["Montserrat Alternates", "sans-serif"],
+				'sharp-grotesk': ["'Sharp Grotesk'", "sans-serif"],
 			},
 		},
 	},
