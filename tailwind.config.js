@@ -55,6 +55,17 @@ module.exports = {
 				'sharp-grotesk': ["'Sharp Grotesk'", "sans-serif"],
 			},
 		},
+		keyframes: {
+			
+			"scroll": {
+			  to: {
+				transform: "translate(calc(-20% - 0.5rem))",
+			  },
+			},
+		},
+		animation: {			
+			"scroll": "scroll var(--animation-duration, 30s) var(--animation-direction, forwards) linear infinite",	
+		},
 	},
 	plugins: [require("tailwindcss-animate")],
 };
