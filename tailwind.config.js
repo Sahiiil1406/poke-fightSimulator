@@ -9,6 +9,18 @@ module.exports = {
 	],
 	prefix: "",
 	theme: {
+		screens: {
+			sm: "375px",
+			md: "768px",
+			lg: "1200px",
+		},
+		container: {
+			center: true,
+			padding: {
+				DEFAULT: "1rem",
+				md: "2rem",
+			},
+		},
 		extend: {
 			colors: {
 				"primary-orange": {
@@ -38,8 +50,22 @@ module.exports = {
 					950: "#142c57",
 				},
 			},
+			fontFamily: {
+				montserrat: ["Montserrat Alternates", "sans-serif"],
+				'sharp-grotesk': ["'Sharp Grotesk'", "sans-serif"],
+			},
+		},
+		keyframes: {
+			
+			"scroll": {
+			  to: {
+				transform: "translate(calc(-20% - 0.5rem))",
+			  },
+			},
+		},
+		animation: {			
+			"scroll": "scroll var(--animation-duration, 30s) var(--animation-direction, forwards) linear infinite",	
 		},
 	},
-
 	plugins: [require("tailwindcss-animate")],
 };
