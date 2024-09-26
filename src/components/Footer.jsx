@@ -1,9 +1,33 @@
 import React from "react";
 import logo from "../assets/e-cell_logo.png"
+import { MarqueScroll } from "../components/Marque";
 
 export default function Footer() {
   return (
-	
+    <>
+    
+    <div className="flex flex-col space-y-[-3.5em]">
+    <div>
+     <MarqueScroll
+        border="border-white"
+				texts={['Entrepreneurship', 'Startups', 'Networking']}
+        colors={['white', 'white', 'white']}
+				angle={2}
+				className="bg-black"
+			></MarqueScroll>
+      </div>
+      <div className="flex flex-col space-y-[-3.5em]">
+      <MarqueScroll
+        border="border-white"
+				texts={['Entrepreneurship', 'Startups', 'Networking']}
+        colors={['white', 'white', 'white']}
+				angle={-2}
+				className="bg-black"
+			></MarqueScroll>
+      </div>
+    </div> 
+      
+      
     <footer className="bg-gradient-to-r  from-[#001b339a] to-[#4608009a] text-white py-12 ">
       <div className="container w-full mx-auto flex flex-col md:flex-row gap-8 md:gap-20 lg:gap-32 justify-center items-center ">
         <div className="mb-8 md:mb-0">
@@ -67,7 +91,33 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-	
+    
+    </>
   )
 }
+
+
+
+// <div className="flex flex-col md:space-y-[-1.5em] space-y-[-2em]">
+//         <div>
+//       <MarqueScroll
+//         direction="left"
+//         border="border-none"
+// 				texts={['INNOVATE', 'CREATE', 'INSPIRE']}
+//         colors={['white', '#1575CC', '#F34C19']}
+// 				angle={2}
+// 				className=" bg-none"
+// 			></MarqueScroll>
+//       </div>
+//       <div>
+//       <MarqueScroll
+//         direction="right"
+//         border="border-none"
+// 				texts={['INSPIRE', 'INNOVATE', 'CREATE']}
+//         colors={['#F34C19', 'white', '#1575CC']}
+// 				angle={2}
+// 				className="bg-none"
+// 			></MarqueScroll>
+//       </div>
+//       </div>
 
