@@ -10,9 +10,8 @@ import Footer from "./components/Footer";
 
 export default function App() {
 	return (
-		<div className="w-full  bg-black  h-[100vh]">
+		<div className="w-full  bg-black  h-[100vh] flex flex-col">
 			<Navbar />
-
 			<Routes>
 				<Route path="*" element={<LandingPage />} />
 				<Route path="/" element={<LandingPage />} />

@@ -22,7 +22,8 @@
 		"react-router": "^6.24.1",
 		"react-router-dom": "^6.24.1",
 		"tailwind-merge": "^2.4.0",
-		"tailwindcss-animate": "^1.0.7"
+		"tailwindcss-animate": "^1.0.7",
+		"waterfalljs-layout": "^0.1.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.14.11",
