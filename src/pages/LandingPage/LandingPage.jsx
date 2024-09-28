@@ -4,7 +4,7 @@ import InfoSection from "./components/InfoSection";
 
 import TeamCarousel from "./components/Teams/TeamCarousel";
 import OurVision from "./components/OurVision";
-
+import SocialLinks from "./components/SocialLinks";
 
 export default function LandingPage() {
 	return (
@@ -13,6 +13,8 @@ export default function LandingPage() {
 			<InfoSection />
 			<OurVision/>
 			<TeamCarousel />
+			<SocialLinks />
+			
 		</>
 	);
 }
