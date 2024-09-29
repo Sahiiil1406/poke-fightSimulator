@@ -6,7 +6,7 @@ const WinnerGif = (props) => {
     <div className="bg-white p-6 rounded-lg shadow-xl text-center">
       <h2 className="text-2xl font-bold mb-4"> wins!</h2>
       <img 
-        src="/image.png" 
+        src="image.png" 
         alt="Winner celebration" 
         className="mx-auto mb-4"
       />
