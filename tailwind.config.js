@@ -68,4 +68,7 @@ module.exports = {
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
+	images: {
+        domains: ['raw.githubusercontent.com'],
+      },
 };
