@@ -8,8 +8,8 @@ export default function App() {
   return (
     <div className="w-full  bg-black  h-[100vh] flex justify-center items-center flex-col">
       <Routes>
-        <Route path="/" element={<Card />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/poke-Simulator/" element={<Card />} />
+        <Route path="/poke-Simulator/detail/:id" element={<Detail />} />
       </Routes>
     </div>
   );
