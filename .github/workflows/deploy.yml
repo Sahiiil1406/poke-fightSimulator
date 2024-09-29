@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  # v2 is fine for this action
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3  # Update to v3
         with:
           node-version: 18
 
@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3  # Update to v3
         with:
           name: production-files
           path: ./dist
@@ -38,8 +38,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2  # This is still fine to keep at v2
+
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3  # Update to v3
         with:
           name: production-files
           path: ./dist
